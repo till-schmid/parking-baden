@@ -1,0 +1,46 @@
+// @name Parking Stadt Baden
+
+/*
+PUBLIC STREET AND SURFACE PARKING IN BADEN (only disabled)
+*/
+
+[out:json][timeout:25];
+
+// Search Area
+{{geocodeArea:Baden (Switzerland)}}->.Baden;
+(
+  {{geocodeArea:Baden (Switzerland)}};
+  {{geocodeArea:Wettingen)}};
+  )->.BadenWettingen;
+
+
+// 1) Publicly accessible street parking (operated by city of Baden), with disabled parking
+nwr["amenity"="parking"]["access"="yes"]["parking"~"^(street_side|lane|on_kerb|half_on_kerb)$"]["capacity:disabled"]["capacity:disabled"!="no"](area.Baden);
+out geom;
+
+make stats streetParkingDisabled=sum(is_tag("capacity:disabled") ? number(t["capacity:disabled"]) : 0);
+out;
+
+// 2) Surface parkings operated by city of Baden, with disabled parking
+// Note: Parking Schwimmbad is located in Wettingen
+
+(
+  nwr["amenity"="parking"]["access"="yes"]
+  ["parking"="surface"]["operator"="Stadt Baden"]["capacity:disabled"]["capacity:disabled"!="no"](area.BadenWettingen);
+);
+out geom;
+
+make stats surfaceParkingDisabled=sum(is_tag("capacity:disabled") ? number(t["capacity:disabled"]) : 0);
+out;
+
+// MAP STYLE
+
+{{style:
+
+*[amenity=parking]
+{ color: steelblue; fill-color:steelblue;
+text: eval("tag('name') . ' (' . tag('capacity:disabled') . ')'");}
+
+}}
+
+// Best use with Tile Server: http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png
