@@ -1,0 +1,56 @@
+// @name Private Parking Stadt Baden
+
+/*
+PRIVATE PARKING IN BADEN (incomplete!)
+*/
+
+[out:json][timeout:25];
+
+// Search Area
+{{geocodeArea:Baden (Switzerland)}}->.Baden;
+(
+  {{geocodeArea:Baden (Switzerland)}};
+  {{geocodeArea:Wettingen)}};
+  )->.BadenWettingen;
+
+
+// 1) Private street and surface parking 
+nwr["amenity"="parking"]["access"]["access"!="yes"]["parking"~"^(street_side|lane|on_kerb|half_on_kerb)$"](area.Baden);
+out geom;
+
+make stats streetParking=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
+
+// 1) Private garage parking
+
+nwr["amenity"~"^(parking|parking_entrance)$"]["access"]["access"!="yes"]["parking"~"^(multi-storey|underground|rooftop)$"](area.Baden);
+
+out geom;
+make stats garageParking=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
+
+// MAP STYLE
+
+{{style:
+
+*[parking=lane]
+{ color: gold; fill-color:gold; }
+*[parking=street_side]
+{ color: gold; fill-color:gold; }
+*[parking=on_kerb]
+{ color: gold; fill-color:gold; }
+*[parking=half_on_kerb]
+{ color: gold; fill-color:gold; }
+
+*[parking=surface]
+{ color: gold; fill-color:gold; }
+
+*[parking=multi-storey]
+{ color: darkorange; fill-color:darkorange }
+*[parking=underground]
+{ color: darkorange; fill-color:darkorange }
+*[parking=rooftop]
+{ color: darkorange; fill-color:darkorange }
+
+
+}}
