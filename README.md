@@ -14,14 +14,49 @@ Interaktive Karte: [Öffentliche Parkplätze in der Stadt Baden ](https://overpa
 | $`\textcolor{red}{\text{●}}`$ | Öffentliche Parkplätze im privaten Besitz | mind.[^2] 2'595
 | | **Total öffentliche Parkplätze in Baden** | mind. 6'193
 
+[![parkingMap](https://github.com/user-attachments/assets/5425308f-0b49-418a-8a22-af085cf9a5d9)](https://overpass-turbo.eu/s/1Ww7)
+
+## Private Parkplätze
+> [!WARNING]
+> Die Zahlen zu den privaten Parkplätzen in Baden sind auf OpenStreetMap noch sehr unvollständig. Unterirdische Parkierungsanlagen fehlen praktisch komplett, die oberirdischen sind unvollständig. Bei der Aktualisierung im Dezember 24/Januar 25 lag der Fokus auf den öffentlichen Parkplätzen.
+
+Interaktive Karte: [Private Parkplätze in der Stadt Baden]()
+
+| | Typ | Anzahl Parkfelder[^3] |
+|--|--|--|
+| $`\textcolor{gold}{\text{●}}`$ |  Private Parkplätze entlang von Strassen | mind. 1'530
+| $`\textcolor{goldenrod}{\text{●}}`$ | Private oberirdische Parkierungsanlagen | mind. 2'781
+| | **Total oberirdische private Parkplätze** | mind. 4'311
+| $`\textcolor{darkorange}{\text{●}}`$ | Private Parkhäuser | zu wenig Daten
+
+![privateParkingMap](https://github.com/user-attachments/assets/1cf6daed-059a-4121-bc6e-91d716e464eb)
+
+
+
+## Gedanken dazu
+
+1. Die von der Stadt für 2025 **budgetierten 1'500 Oberflächenparkplätze stimmen ziemlich gut**. Trotz des "Abbaus" im 2024 (AZ-Hochhaus, Parkstrasse) sind es noch immer rund 1'600 oberirdische Parkplätze.
+2. Die knapp 900 Parkplätze entlang von Strassen sind nicht unerheblich. **Viel wichtiger sind aber die grösseren Parkierungsanlagen (oberirdisch und in Parkhäusern)**. Im (Teil-) Besitz der Stadt Baden sind das rund 1'700 Parkplätze, zählt man die öffentlich zugänglichen privaten Anlagen dazu, sind es sogar mindestens rund 5'300; da fallen die 900 wenig ins Gewicht (17 %).
+3. Die **Zahl der privaten öffentlichen Parkplätze ist nicht vollständig**. Es fehlen noch einige Anlagen (z.B. Bareggcenter). Auch wenn einige dieser Anlagen oft einen primären Zweck haben (z.B. Parkplatz bei der Boulderhalle), können diese allgemein benutzt werden und sollten daher mitberücksichtigt werden.
+4. **Baden hat mit total mindestens rund 6'200 öffentlich zugänglichen Parkplätzen sehr viele Parkplätze**. Es macht daher sicher keinen Sinn, über die Aufhebung einzelner weniger Parkplätze (z.B. entlang Oberstadtstrasse) lange zu diskutieren.
+5. Die Haltung des Stadrats, oberirdische Parkplätze entlang von Strassen in (unterirdische) Parkierungsanlagen zu verschieben macht grundsätzlich sicher Sinn. Dies ist aber nicht überall gleich dringend. Es gibt viele Stellen, wo diese Parkplätze wenig stören. **Eine Aufhebung/Verschiebung ist m.E. aus folgenden Gründen dringend**:
+   - Städtebauliche Gründe: Strassenraum ist öffentlicher Raum. Statt ihn mit Autos zu besetzen, kann er begrünt oder belebt werden. Beispiel: Bereich ums AZ-Hochhaus.
+   - Wichtige Infrastrukturen: Beispielsweise Veloinfrastruktur. Beispiel: Veloschnellroute Zürcherstrasse.
+   - Klimawirksame Massnahmen: Begrünung oder Entsiegelung. Beispiel: Bereich ums AZ-Hochhaus.
+6. Als Argument für Notwendigkeit von Strasenparkplätzen werden oft gehbehinderte Personen ins Feld geführt, welche auf Parkplätze angewiesen sind, die nahe am Ziel liegen. Von den rund 1'500 Oberflächenparkplätzen im Eigentum der Stadt Baden sind aber **nur gerade 8 Parkplätze für Behinderte** reserviert. Mehr Behindertenparkplätze würden hier wohl mehr helfen. 
+7. Der Fokus liegt hier auf den öffentlichen Parkplätzen. Aber man darf die **privaten Parkplätze** (Bewohnende, Besuchende, Angestellte, etc.) nicht vergessen! Die Zahlen dazu sind auf OSM noch sehr unvollständig. Es fehlen etliche Parkplätze, vor allem unterirdische Parkierungen fehlen praktisch komplett.
+   - Trotz den unvollständigen Zahlen sind schon jetzt **sehr viele oberirdische private Parkplätze** in der OSM Datenbank vorhanden: **Total über 4'300**! Das sind weit mehr als die öffentlich zugänglichen oberirdischen Parkplätze. Davon liegen rund 1'500 entlang oder neben Strassen und prägen somit das öffentliche Strassenbild. 
+   - Die Anzahl privater Parkplätze wird über die BNO gesteuert. In Baden sind heute bis zu 1 Parkplatz pro Wohnung möglich - auch im Zentrum. Das ist weit mehr, als beispielsweise Winterthur zulässt[^4]. Daher ist es wichtig, dass die BNO in diesem Bereich überarbeitet wird und weniger Parkplätze zulässt.
+8. Insgesamt sind in der OSM Datenbank in Baden 10'504 Parkplätze vorhanden. Da noch etliche unterirdische private Parkierungsanlagen fehlen, wird die totale Anzahl weit höher ausfallen. In der Schweiz werden etwa ein Parkplatz pro EinwohnerIn geschätzt[^5], in Baden dürfte dieser Wert mindestens ähnlich gross sein.
+9. Eine Studie der Credit Suisse aus dem Jahr 2020 stellt in der Schweiz generell ein Überangebot an Parkplätzen fest.[^6]
+
+## Datenquelle
+Die Daten stammen von [OpenStreetMap](https://www.openstreetmap.org/) und wurden anhand von Luftbildern (August 2024) sowie Begehungen im Dezember 24/Januar 25 aktualisiert. Es besteht kein Anspruch auf Vollständigkeit.
+Fehler bitte direkt auf OpenStreetMap korrigieren oder melden an till.schmid@teambaden.ch.
+
 [^1]: Parkhaus Ländli AG und Grand Casino Baden AG
 [^2]: Zahlen unvollständig
 [^3]: Stand 2.1.2025
-
-
-
-[![parkingMap](https://github.com/user-attachments/assets/5425308f-0b49-418a-8a22-af085cf9a5d9)](https://overpass-turbo.eu/s/1Ww7)
-
-## Datenquelle
-Die Daten stammen von [Open Street Map](https://www.openstreetmap.org/) und wurden anhand von Luftbildern (August 2024) sowie Begehungen im Dezember 24/Januar 25 aktualisiert. Es besteht kein Anspruch auf Vollständigkeit.
-Fehler bitte direkt auf Open Street Map korrigieren oder melden an till.schmid@teambaden.ch.
+[^4]: [GVK Raum Baden und Umgebung, Konferenz 25.5.24, Folie 68](https://www.ag.ch/media/kanton-aargau/bvu/mobilitaet-und-verkehr/gesamtverkehrsplanung/gvk-region-ostaargau/raum-baden-und-umgebung/projektdokumentation/20240525-gvk-raum-baden-uu-mok4a-vollst-ndig-1.pdf)
+[^5]: https://www.tagesanzeiger.ch/parkplatz-land-schweiz-661473879811
+[^6]: [Schweizer Immobilienmarkt 2020, Credit Suisse, Seite 31 ff.](./schweizer-immobilienmarkt-2020.pdf)
