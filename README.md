@@ -1,7 +1,7 @@
 # Parkplätze in Baden
 
 ## Öffentliche Parkplätze
-Interaktive Karte: [Öffentliche Parkplätze in der Stadt Baden ](https://overpass-turbo.eu/s/1Ww5)
+Interaktive Karte: [Öffentliche Parkplätze in der Stadt Baden ](https://overpass-turbo.eu/s/1Ww7)
 
 | | Typ | Anzahl Parkfelder[^3] |
 |--|--|--|
@@ -20,7 +20,7 @@ Interaktive Karte: [Öffentliche Parkplätze in der Stadt Baden ](https://overpa
 
 
 
-[![parkingMap](https://github.com/user-attachments/assets/5425308f-0b49-418a-8a22-af085cf9a5d9)](https://overpass-turbo.eu/s/1Ww5)
+[![parkingMap](https://github.com/user-attachments/assets/5425308f-0b49-418a-8a22-af085cf9a5d9)](https://overpass-turbo.eu/s/1Ww7)
 
 ## Datenquelle
 Die Daten stammen von [Open Street Map](https://www.openstreetmap.org/) und wurden anhand von Luftbildern (August 2024) sowie Begehungen im Dezember 24/Januar 25 aktualisiert. Es besteht kein Anspruch auf Vollständigkeit.
