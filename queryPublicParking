@@ -1,5 +1,5 @@
 /*
-PUBLIC STREET AND SURFACE PARKING IN BADEN
+PUBLIC PARKING IN BADEN
 */
 
 [out:json][timeout:25];
@@ -69,9 +69,6 @@ out;
 { color: steelblue; fill-color:steelblue; }
 
 *[parking=surface]
-{ color: steelblue; fill-color:steelblue; }
-
-*[parking=surface][capacity>25]
 { color: #6646b4; fill-color:#6646b4; }
 
 *[parking=multi-storey]
@@ -96,6 +93,4 @@ out;
 
 }}
 
-
-// https://colorkit.co/color/4682b4/
-// https://gist.github.com/govvin/a095afd2fd53c9e5f2af232ef55ffde1
+// Best use with Tile Server: http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png
