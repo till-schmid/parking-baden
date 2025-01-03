@@ -1,7 +1,5 @@
-// @name Parking Stadt Baden
-
 /*
-PUBLIC STREET AND SURFACE PARKING IN BADEN (only disabled)
+PUBLIC PARKING IN BADEN (only disabled)
 */
 
 [out:json][timeout:25];
