@@ -14,14 +14,21 @@ PRIVATE PARKING IN BADEN (incomplete!)
   )->.BadenWettingen;
 
 
-// 1) Private street and surface parking 
+// 1) Private street parking 
 nwr["amenity"="parking"]["access"]["access"!="yes"]["parking"~"^(street_side|lane|on_kerb|half_on_kerb)$"](area.Baden);
 out geom;
 
 make stats streetParking=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
 out;
 
-// 1) Private garage parking
+// 2) Private surface parking 
+nwr["amenity"="parking"]["access"]["access"!="yes"]["parking"="surface"](area.Baden);
+out geom;
+
+make stats surfaceParking=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
+
+// 3) Private garage parking
 
 nwr["amenity"~"^(parking|parking_entrance)$"]["access"]["access"!="yes"]["parking"~"^(multi-storey|underground|rooftop)$"](area.Baden);
 
@@ -43,7 +50,7 @@ out;
 { color: gold; fill-color:gold; }
 
 *[parking=surface]
-{ color: gold; fill-color:gold; }
+{ color: goldenrod; fill-color:goldenrod }
 
 *[parking=multi-storey]
 { color: darkorange; fill-color:darkorange }
@@ -52,5 +59,9 @@ out;
 *[parking=rooftop]
 { color: darkorange; fill-color:darkorange }
 
+*[capacity>25]
+{text: eval("tag('name') . ' (' . tag('capacity') . ')'");}
 
 }}
+
+// Best use with Tile Server: http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png
