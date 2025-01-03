@@ -53,7 +53,7 @@ Karte mit Abfragequery: [Link](https://overpass-turbo.eu/s/1WxG)
 9. Eine Studie der Credit Suisse aus dem Jahr 2020 stellt in der Schweiz generell ein Überangebot an Parkplätzen fest. [^6]
 
 Die meisten der oben aufgeführten Punkte werden im **Konzept öffentliche Parkierung Innenstadt Baden (September 2024)** gestützt und detailliert erläutert. Wichtige Punkte des Konzepts:
-- Kreise Modell: Die Stadt wird in 3 Kreise unterteilt, worin die Parkplätze für unterschiedliche Zielgruppen zur verfügung stehen sollen. Im Zentrum primär planungsrechtlich notwendige Dauerparkieruende und Kurzzeitparkierende, in peripheren Lagen auch "planungsrechtlich nicht notwendige" Dauerparkierende. Die Begriffe werden im Bericht erläutert.
+- Kreise Modell: Die Stadt wird in 3 Kreise unterteilt, worin die Parkplätze für unterschiedliche Zielgruppen zur Verfügung stehen sollen. Im Zentrum primär planungsrechtlich notwendige Dauerparkieruende und Kurzzeitparkierende, in peripheren Lagen auch "planungsrechtlich nicht notwendige" Dauerparkierende. Die Begriffe werden im Bericht erläutert.
 - Oberirdische Parkplätze sollen aufgehoben werden, prioritär in den Kreisen 1 und 2. In den öffentlichen Parkhäusern (der Stadt und von Privaten) hat es noch Platz, um diese Parkplätze aufzunehmen.
 - Um in den Parkhäusern mehr Platz für Kurzzeitparkierende und planungsroechtlich notwendige Dauerparkierende zu schaffen, müssen die Dauerparkkarten restriktiver ausgegeben werden.
 
