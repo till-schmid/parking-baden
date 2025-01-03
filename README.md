@@ -9,7 +9,7 @@ Karte mit Abfragequery: [Link](https://overpass-turbo.eu/s/1WxE)
 |--|--|--|
 | $`\textcolor{steelblue}{\text{●}}`$ |  Öffentliche Parkplätze auf und entlang von Strassen | 909
 | $`\textcolor{#6646b4}{\text{●}}`$ | Oberirdische Parkierungsanlagen, im Besitz der Stadt Baden | 688
-| | **Total oberirdische Parkplätze** | **1'597**
+| | **Total öffentliche oberirdische Parkplätze** | **1'597**
 | $`\textcolor{#b446a7}{\text{●}}`$ | Öffentliche Parkhäuser, im Besitz der Stadt Baden | 1'053
 | $`\textcolor{#b446a7}{\text{◌}}`$ | Öffentliche Parkhäuser, 50% im Besitz der Stadt Baden [^1] | 948
 | | **Total Parkplätze in Parkhäusern im (Teil-) Eigentum der Stadt Baden** | **2'001**
