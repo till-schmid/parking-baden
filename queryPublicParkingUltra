@@ -1,0 +1,338 @@
+---
+description: Öffentliche Parkplätze in Baden
+
+options:
+  keyboard: false
+  dragRotate: false
+  touchZoomRotate: false
+
+controls:
+  - type: NavigationControl
+  - type: HTMLControl
+    options:
+      html: >
+        <div class="maplibregl-ctrl maplibregl-ctrl-group">
+          <label for="info-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z"/></svg>
+          </label>
+        </div>
+          <input type="checkbox" id="info-modal" checked></input>
+          <div class="info-modal">
+            <label for="info-modal" class="close">✕</label>
+            
+            <a href="https://teambaden.ch"><img src="https://teambaden.ch/wp-content/uploads/2018/04/1069870_144728375724798_8415001_n.jpg" height="30"></a>
+            
+            <h1>Öffentliche Parkplätze in Baden</h1>
+            
+                        <p>
+            Die Karte zeigt alle öffentlich zugänglichen Parkplätze in Baden. Private, reservierte oder fix vermietete Parkplätze sind nicht dargestellt.
+            </p>
+            
+            
+            <p>
+            <span style="color: steelblue; font-size: 24px;"> ▰ </span> Öffentliche Parkplätze auf und entlang von Strassen <br>
+            <span style="color: #6646b4; font-size: 24px;"> ▰ </span> Oberirdische Parkplätze, Eigentum Stadt Baden <br>
+            <span style="color: #cf51C0; font-size: 24px;"> ▰ </span> Öffentliche Parkhäuser, Eigentum Stadt Baden <br>
+            <span style="color: #800056; font-size: 24px;"> ▰ </span> Öffentliche Parkhäuser, 50% Eigentum Stadt Baden <br>
+            <span style="color: #cc0033; font-size: 24px;"> ▰ </span> Öffentliche Parkplätze, privates Eigentum
+            </p>
+            
+            <p style="line-height: 1; ">
+            
+            Ein Projekt des team baden. Weitere Infos und Analysen: <a href="https://teambaden.ch/">teambaden.ch</a>
+            </p>
+            <p style="line-height: 0.5; ">
+            
+            Datenquelle: <a href="https://www.openstreetmap.org/#map=14/47.47405/8.30648">OpenStreetMap (OSM)</a>
+            </p>
+            <p style="font-size:10px; line-height: 1.5; ">
+              OSM basiert auf Open Data, jede:r kann die Daten bearbeiten. Das team baden hat die Parkplatzdaten für Baden anhand von Luftbildern (August 2024) und Begehungen (Januar 2025) überprüft und aktualisiert. Es besteht kein Anspruch auf Vollständigkeit oder Richtigkeit. Fehler können direkt auf <a href="https://www.openstreetmap.org/#map=14/47.47405/8.30648">OpenStreetMap</a> korrigiert werden. Danke für die Mithilfe!</span>
+            </p>
+            <p style="font-size:10px; color: red; ">
+            TODO: Fix vermietete (gelbe) PP in Parkhäusern abziehen!
+            </p>
+          </div>
+      css: >
+        .maplibregl-ctrl svg {
+          height: 16px;
+          width: 16px;
+          padding: 6.5px;
+          float: right;
+        }
+        .maplibregl-ctrl svg:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+        label[for=info-modal] {
+          cursor: pointer;
+        }
+        label[for=info-modal].close {
+          float: right;
+          text-align: center;
+          height: 20px;
+          width: 20px;
+          display: block;
+        }
+        #info-modal {
+          display: none;
+        }
+        .info-modal {
+          display: none;
+        }
+        #info-modal:checked + .info-modal {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin-top: 50px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          padding: 20px;
+          background: white;
+          border-radius: 10px;
+          border: 1px solid grey;
+          pointer-events: initial;
+          box-shadow: 0 0 5px;
+        }
+
+
+style:
+  layers:
+  
+    # STREET PARKING
+    - type: fill
+      filter: 
+      - any
+      - [ ==, [ get, parking ], lane]
+      - [ ==, [ get, parking ], street_side]
+      - [ ==, [ get, parking ], on_kerb]
+      - [ ==, [ get, parking ], half_on_kerb]
+      fill-color: steelblue
+      fill-opacity: 1
+      fill-sort-key: 0
+      
+    - type: line
+      filter:
+      - any
+      - [ ==, [ get, parking ], lane]
+      - [ ==, [ get, parking ], street_side]
+      - [ ==, [ get, parking ], on_kerb]
+      - [ ==, [ get, parking ], half_on_kerb]
+      line-color: steelblue
+      line-width: 3
+      line-sort-key: 99
+      
+    # SURFACE PARKING, CITY OF BADEN
+    - type: fill
+      filter: 
+      - all
+      - [ ==, [ get, parking ], surface]
+      - [==, [get, operator], Stadt Baden] 
+      fill-color: "#6646b4"
+      fill-opacity: 0.3
+      fill-sort-key: 0
+      
+    - type: line
+      filter:
+      - all
+      - [ ==, [ get, parking ], surface]
+      - [==, [get, operator], Stadt Baden] 
+      line-color: "#6646b4"
+      line-width: 2
+      line-opacity: 0.7
+      line-sort-key: 99
+      
+    # SURFACE PARKING, PRIVATE OWNERS
+    - type: fill
+      filter: 
+      - all
+      - [==, [ get, parking ], surface]
+      - ["!=", [get, operator], Stadt Baden] 
+      fill-color: red
+      fill-opacity: 0.3
+      fill-sort-key: 0
+      
+    - type: line
+      filter:
+      - all
+      - [ ==, [ get, parking ], surface]
+      - ["!=", [get, operator], Stadt Baden] 
+      line-color: red
+      line-width: 2
+      line-opacity: 0.7
+      line-sort-key: 99
+      
+    # GARAGES, CITY OF BADEN
+    - type: circle
+      filter: 
+      - all
+      - [==, [geometry-type], Point]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]
+      - [==, [get, operator], Stadt Baden]  
+      circle-color: "#b446a7"
+      circle-radius: 8
+      circle-opacity: 0.3
+      circle-stroke-color: "#cf51C0"
+      circle-stroke-width: 2
+      circle-stroke-opacity: 0.7
+      
+    - type: fill
+      filter: 
+      - all
+      - [==, [geometry-type], Polygon]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]  
+      - [==, [get, operator], Stadt Baden]  
+      fill-color: "#cf51C0"
+      fill-opacity: 0.3
+      fill-sort-key: 0
+      
+    - type: line
+      filter: 
+      - all
+      - [==, [geometry-type], Polygon]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]  
+      - [==, [get, operator], Stadt Baden] 
+      line-color: "#cf51C0"
+      line-width: 2
+      line-opacity: 0.7
+      line-sort-key: 99
+      
+    # GARAGES, 50% CITY OF BADEN
+    - type: circle
+      filter: 
+      - all
+      - [==, [geometry-type], Point]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]
+      - [any, [==, [get, operator], Parkhaus Ländli AG], [==, [get, operator], Grand Casino Baden AG] ]  
+      circle-color: "#800056"
+      circle-radius: 8
+      circle-opacity: 0.3
+      circle-stroke-color: "#800056"
+      circle-stroke-width: 2
+      circle-stroke-opacity: 0.7
+      
+    - type: fill
+      filter: 
+      - all
+      - [==, [geometry-type], Polygon]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]  
+      - [any, [==, [get, operator], Parkhaus Ländli AG], [==, [get, operator], Grand Casino Baden AG] ]  
+      fill-color: "#800056"
+      fill-opacity: 0.3
+      fill-sort-key: 0
+      
+    - type: line
+      filter: 
+      - all
+      - [==, [geometry-type], Polygon]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]  
+      - [any, [==, [get, operator], Parkhaus Ländli AG], [==, [get, operator], Grand Casino Baden AG] ]
+      line-color: "#800056"
+      line-width: 2
+      line-opacity: 0.7
+      line-sort-key: 99
+      
+    # GARAGES, PRIVATE OWNERS
+    - type: circle
+      filter: 
+      - all
+      - [==, [geometry-type], Point]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]
+      - [all, ["!=", [get, operator], Parkhaus Ländli AG], ["!=", [get, operator], Grand Casino Baden AG], ["!=", [get, operator], Stadt Baden] ]  
+      circle-color: red
+      circle-radius: 8
+      circle-opacity: 0.3
+      circle-stroke-color: red
+      circle-stroke-width: 2
+      circle-stroke-opacity: 0.7
+      
+    - type: fill
+      filter: 
+      - all
+      - [==, [geometry-type], Polygon]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]  
+      - [all, ["!=", [get, operator], Parkhaus Ländli AG], ["!=", [get, operator], Grand Casino Baden AG], ["!=", [get, operator], Stadt Baden] ] 
+      fill-color: red
+      fill-opacity: 0.3
+      fill-sort-key: 0
+      
+    - type: line
+      filter: 
+      - all
+      - [==, [geometry-type], Polygon]
+      - [ any, [ ==, [ get, parking ], multi-storey], [ ==, [ get, parking ], underground], [ ==, [ get, parking ], rooftop]]  
+      - [all, ["!=", [get, operator], Parkhaus Ländli AG], ["!=", [get, operator], Grand Casino Baden AG], ["!=", [get, operator], Stadt Baden] ] 
+      line-color: red
+      line-width: 2
+      line-opacity: 0.7
+      line-sort-key: 99
+      
+    # LABEL
+    - type: symbol  
+      filter: [">", ["to-number", [get, capacity]], 25]
+      text-field: '{name} ({capacity})'
+      text-size: 10
+      text-anchor: bottom
+      text-offset: [0, -0.5]
+  extends: https://styles.trailsta.sh/positron.json
+
+
+---
+
+/*
+PUBLIC PARKING IN BADEN
+*/
+
+[out:json][timeout:25];
+
+// Search Area
+area(id:3601684261)->.Baden;
+(
+  area(id:3601684261);
+  area(id:3601684458);
+  )->.BadenWettingen;
+
+
+// 1) Publicly accessible street parking (operated by city of Baden)
+nwr["amenity"="parking"]["access"="yes"]["parking"~"^(street_side|lane|on_kerb|half_on_kerb)$"](area.Baden);
+out geom;
+
+make stats streetParking=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
+
+// 2) Surface parkings operated by city of Baden
+// Note: Parking Schwimmbad is located in Wettingen
+
+(
+  nwr["amenity"="parking"]["access"="yes"]
+  ["parking"="surface"]["operator"="Stadt Baden"](area.BadenWettingen);
+);
+out geom;
+
+make stats surfaceParking=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
+
+// 3.1) Garages ("Parkhäuser") operated by city of Baden
+// Garages can be maped with amenity=parking_entrance and/or amenity=parking. To avoid doublecounting, only items with a name are shown.
+nwr["amenity"~"^(parking|parking_entrance)$"]["access"="yes"]["name"~"."]["parking"~"^(multi-storey|underground|rooftop)$"]["operator"="Stadt Baden"](area.Baden);
+
+out geom;
+make stats garageParkingCity=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
+
+// 3.2) Garages ("Parkhäuser") operated by Parkhaus Ländli AG and Grand Casino Baden AG
+// Garages can be maped with amenity=parking_entrance and/or amenity=parking. To avoid doublecounting, only items with a name are shown.
+ nwr["amenity"~"^(parking|parking_entrance)$"]["access"="yes"]["name"~"."]["parking"~"^(multi-storey|underground|rooftop)$"]["operator"~"^(Parkhaus Ländli AG|Grand Casino Baden AG)$"](area.Baden);
+
+out geom;
+make stats garageParkingLaendliCasino=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
+
+
+// 4) Public parking (surface or garages) operated by privates
+  
+    nwr["amenity"~"^(parking|parking_entrance)$"]["access"="yes"]["parking"~"^(surface|multi-storey|underground|rooftop)$"]["operator:type"!="government"]["operator:type"]["operator"!="Parkhaus Ländli AG"]["operator"!="Grand Casino Baden AG"](area.Baden);
+out geom;
+make stats publicParkingByPrivate=sum(is_tag("capacity") ? number(t["capacity"]) : 0);
+out;
