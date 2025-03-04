@@ -23,7 +23,7 @@ Karte mit Abfragequery: [Link](https://overpass-turbo.eu/s/1WxE)
 | $`\textcolor{#cf51C0}{\text{▰}}`$ | Öffentliche Parkhäuser, im Besitz der Stadt Baden | 935
 | $`\textcolor{#800056}{\text{▰}}`$ | Öffentliche Parkhäuser, 50% im Besitz der Stadt Baden [^1] | 790
 | | **Total Parkplätze in Parkhäusern im (Teil-) Eigentum der Stadt Baden** | **1'725 [^2]**
-| $`\textcolor{#cc0033}{\text{▰}}`$ | Öffentliche Parkplätze im privaten Besitz (nicht vollständig) | min. 1'859 [^2]
+| $`\textcolor{#cc0033}{\text{▰}}`$ | Öffentliche Parkplätze im privaten Besitz (nicht vollständig[^8]) | min. 1'859 [^2]
 | | **Total öffentliche Parkplätze in Baden** | **min. 5'181**
 
 Anmerkungen: 
@@ -53,7 +53,7 @@ Karte mit Abfragequery: [Link](https://overpass-turbo.eu/s/1WxG)
 ## Gedanken dazu
 
 1. Die von der Stadt für 2025 **budgetierten 1'500 Oberflächenparkplätze stimmen ziemlich gut**. Trotz des "Abbaus" im 2024 (AZ-Hochhaus, Parkstrasse) sind es noch immer rund 1'600 oberirdische Parkplätze.
-2. Die knapp 900 Parkplätze entlang von Strassen sind nicht unerheblich. **Viel wichtiger sind aber die grösseren Parkierungsanlagen (oberirdisch und in Parkhäusern)**. Im (Teil-) Besitz der Stadt Baden sind das rund 2'700 Parkplätze, im privaten Eigentum rund 2'600. Von allen öffentlich zugänglichen Pakrplätzen sind nur rund 15 % (= 909 ÷ 6193) entlang von Strassen gelegen .
+2. Die knapp 900 Parkplätze entlang von Strassen sind nicht unerheblich. **Viel wichtiger sind aber die grösseren Parkierungsanlagen (oberirdisch und in Parkhäusern)**. Im (Teil-) Besitz der Stadt Baden sind das rund 1'700, im privaten Eigentum rund 1'900 öffentlich zugängliche Parkplätze (ohne fix vermietete PP). Von allen öffentlich zugänglichen Pakrplätzen sind nur rund 18 % (= 909 ÷ 5181) entlang von Strassen gelegen.
 3. Die **Zahl der privaten öffentlichen Parkplätze ist nicht vollständig**. Es fehlen noch einige Anlagen (z.B. Bareggcenter). Auch wenn einige dieser Anlagen oft einen primären Zweck haben (z.B. Parkplatz bei der Boulderhalle), können diese allgemein benutzt werden und sollten daher mitberücksichtigt werden.
 4. **Baden hat mit total mindestens rund 6'200 öffentlich zugänglichen Parkplätzen sehr viele Parkplätze**. Es macht daher sicher keinen Sinn, über die Aufhebung einzelner weniger Parkplätze (z.B. entlang Oberstadtstrasse) lange zu diskutieren.
 5. Die Haltung des Stadrats, oberirdische Parkplätze entlang von Strassen in (unterirdische) Parkierungsanlagen zu verschieben macht grundsätzlich Sinn. Dies ist aber nicht überall gleich dringend. Es gibt viele Stellen, wo diese Parkplätze wenig stören und teilweise auch notwendig sind; z.B. weil Private auf ihrem Grundstück keine Parkplätze erstellen konnten und dafür eine Abgabe bezahlt haben ("planungsrechtlich notwendige Dauerparkierung"). **Eine Aufhebung/Verschiebung oberirdischer Parkplätze ist m.E. aus folgenden Gründen dringend**:
@@ -83,3 +83,4 @@ Fehler bitte direkt auf OpenStreetMap korrigieren oder melden an: till.schmid@te
 [^5]: https://www.tagesanzeiger.ch/parkplatz-land-schweiz-661473879811
 [^6]: [Schweizer Immobilienmarkt 2020, Credit Suisse, Seite 31 ff.](./schweizer-immobilienmarkt-2020.pdf)
 [^7]: Zahlen sehr unvollständig, siehe Warnung oben.
+[^8]: Fehlend: Bareggcenter, Kantonsspital (beides eher Spezialfälle).
