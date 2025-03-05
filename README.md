@@ -43,7 +43,7 @@ Anmerkungen:
 | | **Total öffentliche oberirdische Parkplätze** | **845** | **20.6 %**
 | $`\textcolor{#cf51C0}{\text{▰}}`$ | Öffentliche Parkhäuser, im Besitz der Stadt Baden | 935 | 22.8 %
 | $`\textcolor{#800056}{\text{▰}}`$ | Öffentliche Parkhäuser, 50% im Besitz der Stadt Baden [^1] | 790 | 19.3 %
-| | **Total Parkplätze in Parkhäusern im (Teil-) Eigentum der Stadt Baden** | **1'725 [^2]** | 42.0 %
+| | **Total Parkplätze in Parkhäusern im (Teil-) Eigentum der Stadt Baden** | **1'725 [^2]** | **42.0 %**
 | $`\textcolor{#cc0033}{\text{▰}}`$ | Öffentliche Parkplätze im privaten Besitz | 1'533 [^2] | 37.4 %
 | | **Total öffentliche Parkplätze in Baden** | **4'103** | **100 %**
 
