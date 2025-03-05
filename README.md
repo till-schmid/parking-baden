@@ -20,16 +20,16 @@ Nur Innenstadt: [Link](https://overpass-turbo.eu/s/1ZNH)
 
 ### Ganzes Stadtgebiet
 
-| | Typ | Anzahl Parkfelder[^3] |
-|--|--|--|
-| $`\textcolor{steelblue}{\text{▰}}`$ |  Öffentliche Parkplätze auf und entlang von Strassen | 909
-| $`\textcolor{#6646b4}{\text{▰}}`$ | Oberirdische Parkierungsanlagen, im Besitz der Stadt Baden | 688
-| | **Total öffentliche oberirdische Parkplätze** | **1'597**
-| $`\textcolor{#cf51C0}{\text{▰}}`$ | Öffentliche Parkhäuser, im Besitz der Stadt Baden | 935
-| $`\textcolor{#800056}{\text{▰}}`$ | Öffentliche Parkhäuser, 50% im Besitz der Stadt Baden [^1] | 790
-| | **Total Parkplätze in Parkhäusern im (Teil-) Eigentum der Stadt Baden** | **1'725 [^2]**
-| $`\textcolor{#cc0033}{\text{▰}}`$ | Öffentliche Parkplätze im privaten Besitz (nicht vollständig[^8]) | min. 1'859 [^2]
-| | **Total öffentliche Parkplätze in Baden** | **min. 5'181**
+| | Typ | Anzahl Parkfelder[^3] | % |
+|--|--|--|--|
+| $`\textcolor{steelblue}{\text{▰}}`$ |  Öffentliche Parkplätze auf und entlang von Strassen | 909 | 17.5 %
+| $`\textcolor{#6646b4}{\text{▰}}`$ | Oberirdische Parkierungsanlagen, im Besitz der Stadt Baden | 688 | 13.2 %
+| | **Total öffentliche oberirdische Parkplätze** | **1'597** | **30.8 %**
+| $`\textcolor{#cf51C0}{\text{▰}}`$ | Öffentliche Parkhäuser, im Besitz der Stadt Baden | 935 | 18.0 %
+| $`\textcolor{#800056}{\text{▰}}`$ | Öffentliche Parkhäuser, 50% im Besitz der Stadt Baden [^1] | 790 | 15.2 % 
+| | **Total Parkplätze in Parkhäusern im (Teil-) Eigentum der Stadt Baden** | **1'725 [^2]** | **33.3 %**
+| $`\textcolor{#cc0033}{\text{▰}}`$ | Öffentliche Parkplätze im privaten Besitz (nicht vollständig[^8]) | min. 1'859 [^2] | 35.9 %
+| | **Total öffentliche Parkplätze in Baden** | **min. 5'181** | **100 %**
 
 Anmerkungen: 
 - In den öffentlich zugänglichen Parkhäusern (städtisch und privat) sind ca. 1'012 Parkplätze fix vermietet und werden daher nicht als öffentliche Parkplätze gezählt.
