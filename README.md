@@ -1,7 +1,10 @@
 # Parkplätze in Baden
 
 Wichtige Links:
-- Statische Parkplatzkarte: https://overpass-ultra.us/#query=gist:aea22c9b953409e29558952fac49b945&run&map
+- Statische Parkplatzkarte: https://overpass-ultra.us/#query=gist:aea22c9b953409e29558952fac49b945&run&map&m=13.56/47.4745/8.3041
+- Dynamische Parkplatzkarte: https://overpass-ultra.us/#query=gist:ff90ebabe1bd20e16d869a8e2ad82a26&run&map&m=13.56/47.4745/8.3041
+- Kartenquery statisch: https://gist.github.com/till-schmid/aea22c9b953409e29558952fac49b945
+- KArtenquery dynamisch: https://gist.github.com/till-schmid/ff90ebabe1bd20e16d869a8e2ad82a26
 
 
 ## Öffentliche Parkplätze
